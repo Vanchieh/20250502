@@ -9,6 +9,8 @@ function setup() {
 
 function draw() {
   background('#b8bedd'); // 背景顏色為 b8bedd
+  translate(width, 0); // 將畫布的原點移到右上角
+  scale(-1, 1); // 水平翻轉畫布
   let x = (width - capture.width) / 2; // 計算影像的水平中心位置
   let y = (height - capture.height) / 2; // 計算影像的垂直中心位置
   image(capture, x, y, capture.width, capture.height); // 在畫布中間顯示影像
